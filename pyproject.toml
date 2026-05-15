@@ -1,0 +1,30 @@
+[project]
+name = "fvd"
+version = "0.1.0"
+description = "A wrapper to download Facebook videos in bulk using yt-dlp."
+readme = "README.md"
+authors = [
+    { name = "ResplendentHusky", email = "Why@need.mail" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "browser-cookie3>=0.20.1",
+    "bs4>=0.0.2",
+    "rich>=15.0.0",
+    "selenium>=4.43.0",
+    "typer>=0.25.1",
+    "yt-dlp[curl-cffi,default]>=2026.5.5.233942.dev0",
+]
+
+[project.scripts]
+fvd = "fvd.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+
